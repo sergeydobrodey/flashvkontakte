@@ -1,24 +1,21 @@
 <projectDescription>
-  <id>1341039616046</id>
-  <name>flashing</name>
+  <id>1341045117063</id>
+  <name>game</name>
   <asVersion>0</asVersion>
   <boundTemplate>file:///C|/Users/sergey.dobrodey/AppData/Local/Adobe/Flash CS5/en_US/Configuration/ActionScript 3.0/Templates/boundClass_as3.as</boundTemplate>
   <classTemplate>file:///C|/Users/sergey.dobrodey/AppData/Local/Adobe/Flash CS5/en_US/Configuration/ActionScript 3.0/Templates/standardClass_as3.as</classTemplate>
   <classPath>.</classPath>
   <defaultApp/>
-  <rootURI>file:///E|/flashing/</rootURI>
+  <rootURI>file:///E|/game/</rootURI>
   <flexSDK/>
   <sources editable="false"/>
   <libraries editable="false"/>
   <externalLibraries editable="false"/>
   <compileList editable="false">
-    <uri label="flash.fla">file:///E|/flashing/flash.fla</uri>
+    <uri label="maingame.fla">file:///E|/game/maingame.fla</uri>
   </compileList>
   <recentFiles editable="false">
-    <uri label="Main.as">file:///E|/flashing/Main.as</uri>
-    <uri label="MD5.as">file:///E|/flashing/MD5.as</uri>
-    <uri label="flash.fla">file:///E|/flashing/flash.fla</uri>
-    <uri label="flash.html">file:///E|/flashing/flash.html</uri>
+    <uri label="maingame.fla">file:///E|/game/maingame.fla</uri>
   </recentFiles>
   <locations editable="false"/>
 </projectDescription>
