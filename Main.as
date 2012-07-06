@@ -9,6 +9,7 @@
 	{
 		var gamefield:Array = new Array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0);
 		var points_at_right_place:int = 0;
+		var game:Boolean = false;
 		function randomize(argArray : Array)
 		{
 			if (! argArray)
@@ -17,8 +18,6 @@
 			}
 			gamefield = argArray.slice();
 			startRandomize();
-
-			//return  gamefield;
 		}
 
 		// private 
@@ -27,7 +26,7 @@
 			var len:uint = gamefield.length - 1;
 			while (len--)
 			{
-				var n : int = Math.random()*(len + 1);
+				var n:int = Math.random() * (len + 1);
 				swap(len, n);
 			}
 
@@ -37,7 +36,7 @@
 			randomize(gamefield);
 			createUI();
 			check_points();
-			trace(points_at_right_place);
+			game = true;
 		}
 
 		function createUI():void
@@ -73,9 +72,18 @@
 		function btn_Click(event:MouseEvent):void
 		{
 			movebtn(event.target,gamefield.indexOf(int(event.target.label)));
-			
-			if (points_at_right_place==15) event.target.label = "hello kitty";
+			trace(points_at_right_place);
+			if (points_at_right_place==15)
+			{
+				var bigbutton:Button = new Button();
+				bigbutton.x=175;
+				bigbutton.y=100;
+				bigbutton.height = 200;
+				bigbutton.width = 200;
+				bigbutton.label= " YOU WIN";
+				addChild(bigbutton);			
 
+			}
 		}
 
 		private function swap(x:uint,y:uint):void
@@ -83,6 +91,20 @@
 			var temp:* = gamefield[x];
 			gamefield[x] = gamefield[y];
 			gamefield[y] = temp;
+
+			if (game)
+			{
+				trace('new:',x,' old:',y,' element:',gamefield[x]);
+
+				if (gamefield[x] == x + 1)
+				{
+					points_at_right_place++;
+				}
+				if (gamefield[x] == y + 1)
+				{
+					points_at_right_place--;
+				}
+			}
 		}
 		function movebtn(theButton:Object,pos:int):void
 		{
