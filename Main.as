@@ -3,6 +3,7 @@
 	import flash.display.*;
 	import flash.events.MouseEvent;
 	import gamebtn;
+	import mainMenu;
 	import fl.controls.Button;
 
 	public class Main extends Sprite
@@ -34,6 +35,8 @@
 		public function Main()
 		{
 			randomize(gamefield);
+			gamefield = new Array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0);
+		
 			createUI();
 			check_points();
 			game = true;
@@ -73,19 +76,26 @@
 		{
 			movebtn(event.target,gamefield.indexOf(int(event.target.label)));
 			trace(points_at_right_place);
-			if (points_at_right_place==15)
+			if (points_at_right_place == 15)
 			{
 				var bigbutton:Button = new Button();
-				bigbutton.x=175;
-				bigbutton.y=100;
+				bigbutton.x = 175;
+				bigbutton.y = 100;
 				bigbutton.height = 200;
 				bigbutton.width = 200;
-				bigbutton.label= " YOU WIN";
-				addChild(bigbutton);			
+				bigbutton.label = " YOU WIN";
+				addChild(bigbutton);
+				bigbutton.addEventListener(MouseEvent.CLICK,win_click);
 
 			}
 		}
 
+		function win_click(event:MouseEvent):void
+		{
+			var temp1 = new menuholder();
+			addChild(temp1);
+			trace("win click");
+		}
 		private function swap(x:uint,y:uint):void
 		{
 			var temp:* = gamefield[x];
