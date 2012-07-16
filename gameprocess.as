@@ -31,9 +31,9 @@
 		}
 		public function gameprocess()
 		{
-			//this.name = "go-go-go";
+			this.name = "gogogo";
 			randomize(gamefield);
-			gamefield = new Array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0);
+			//gamefield = new Array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0);
 			createUI();
 			check_points();
 			game = true;

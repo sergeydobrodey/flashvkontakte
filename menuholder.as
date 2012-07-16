@@ -29,10 +29,12 @@
 			
 		}
 	     function new_Click(event:MouseEvent):void {
-			// var game = new gameprocess();
-			// parent.addChild(game);
-			trace(root);
-			parent.removeChild(this);					
+			var game = new gameprocess();
+			var link =  parent.parent;
+			parent.parent.removeChild(parent.parent.getChildByName("gogogo"));
+			link.addChild(game);			
+			//trace(parent.parent.getChildByName("gogogo"));
+			// parent.removeChild(this);					
 			
 			//addChild(game);
 			//parent.Main();			
