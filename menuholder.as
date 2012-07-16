@@ -29,7 +29,12 @@
 			
 		}
 	     function new_Click(event:MouseEvent):void {
-			parent.removeChild(this);
+			// var game = new gameprocess();
+			// parent.addChild(game);
+			trace(root);
+			parent.removeChild(this);					
+			
+			//addChild(game);
 			//parent.Main();			
 		 }
 		 function about_Click(event:MouseEvent):void {
