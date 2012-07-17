@@ -31,7 +31,7 @@
 		}
 		public function gameprocess()
 		{
-			this.name = "gogogo";
+			this.name = "game";
 			randomize(gamefield);
 			//gamefield = new Array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0);
 			createUI();
@@ -89,9 +89,10 @@
 		}
 
 		function win_click(event:MouseEvent):void
-		{
-			var temp1 = new menuholder();
-			addChild(temp1);
+		{						
+			var menu = new menuholder();
+			parent.addChild(menu);
+			parent.removeChild(this);
 			trace("win click");			
 		}
 		private function swap(x:uint,y:uint):void

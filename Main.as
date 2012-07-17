@@ -8,8 +8,9 @@
 	{
 		public function Main()
 		{
-			var game = new gameprocess();	
-			addChild(game);
+			var showmenu = new menuholder();
+			addChild(showmenu);
+			
 		}
 	}
 

@@ -9,6 +9,7 @@
 		
 		public function menuholder() {
 			// constructor code		
+			this.name = "menu";
 			var newgame = new Button();
 			newgame.x=175;
 			newgame.y=100;
@@ -30,11 +31,12 @@
 		}
 	     function new_Click(event:MouseEvent):void {
 			var game = new gameprocess();
-			var link =  parent.parent;
-			parent.parent.removeChild(parent.parent.getChildByName("gogogo"));
-			link.addChild(game);			
+			//var link =  parent.parent;
+			//parent.parent.removeChild(parent.parent.getChildByName("game"));
+			parent.addChild(game);
+			//link.addChild(game);			
 			//trace(parent.parent.getChildByName("gogogo"));
-			// parent.removeChild(this);					
+			parent.removeChild(this);					
 			
 			//addChild(game);
 			//parent.Main();			
